@@ -8,7 +8,7 @@ const Home = ({refProp}) => {
       <div className="w-full h-full flex flex-col justify-center p-20 bg-blue-500/60">
         <h1 className="text-8xl font-bold text-white pb-5">
           <TypeAnimation
-            sequence={["Apricot Insurance", 3000, "", 1000]}
+            sequence={["Apricoat Insurance", 3000, "", 2000]}
             speed={50}
             wrapper="span"
             repeat={Infinity}
