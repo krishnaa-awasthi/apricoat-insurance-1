@@ -9,11 +9,11 @@ const Nav = () => {
   const [isSamsung, setIsSamsung] = useState(false);
 
   useEffect(() => {
-    // Detect iOS devices
+    
     setIsIOS(/iPad|iPhone|iPod/.test(navigator.userAgent) || 
              (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
     
-    // Detect Samsung devices
+    
     setIsSamsung(/Samsung|SM-/.test(navigator.userAgent));
   }, []);
 
@@ -51,8 +51,7 @@ const Nav = () => {
                         ${isIOS ? 'tracking-tight' : ''}`}>
           Apricoat Insurance
         </div>
-
-        {/* Desktop Menu */}
+        
         <div className="hidden md:flex items-center gap-4 lg:gap-6">
           {navItems.map((item) => (
             <button

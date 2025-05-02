@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,7 +69,7 @@ const About = ({ refProp }) => {
             Our team of dedicated professionals works closely with each client to understand their unique risks...
           </p>
           <button className="bg-blue-800 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-900 transition">
-            Learn More About Us
+            <Link to="apricoat-insurance/team">Learn More About Us</Link>
           </button>
         </div>
 
