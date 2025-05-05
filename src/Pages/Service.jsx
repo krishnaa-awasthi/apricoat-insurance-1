@@ -1,7 +1,8 @@
-import React, { useContext, useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ServicesProvider } from '../Context/ServiceContext';
+import React, { useContext, useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ServicesProvider } from "../Context/ServiceContext";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,12 +20,12 @@ const Services = ({ refProp }) => {
           y: 0,
           opacity: 1,
           duration: 1,
-          ease: 'power3.out',
+          ease: "power3.out",
           stagger: 0.3,
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: 'top 80%',
-            toggleActions: 'play none none none',
+            start: "top 80%",
+            toggleActions: "play none none none",
           },
         }
       );
@@ -41,10 +42,13 @@ const Services = ({ refProp }) => {
       }}
       className="bg-gray-50 py-16 px-6 md:px-20 text-center"
     >
-      <h2 className="text-4xl font-bold text-blue-900 mb-4">Our Insurance Services</h2>
+      <h2 className="text-4xl font-bold text-blue-900 mb-4">
+        Our Insurance Services
+      </h2>
       <p className="text-gray-600 mb-12 max-w-3xl mx-auto">
-        We offer a wide range of insurance solutions to protect what matters most to you.
-        From maritime operations to property protection, we've got you covered.
+        We offer a wide range of insurance solutions to protect what matters
+        most to you. From maritime operations to property protection, we've got
+        you covered.
       </p>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -61,15 +65,12 @@ const Services = ({ refProp }) => {
               {service.title}
             </h3>
             <p className="text-gray-600 mb-4">{service.description}</p>
-            <button className="text-blue-700 font-semibold hover:underline">
-              Learn more →
-            </button>
           </div>
         ))}
       </div>
 
       <button className="mt-10 bg-blue-800 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-md">
-        View All Services
+        <Link to="apricoat-insurance/allserivces">View all Services</Link>
       </button>
     </section>
   );

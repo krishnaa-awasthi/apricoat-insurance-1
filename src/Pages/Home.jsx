@@ -6,7 +6,7 @@ const Home = ({ refProp }) => {
   return (
     <div
       ref={refProp}
-      className='w-full  min-h-screen bg-[url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop")] bg-cover bg-center'
+      className='w-full  h-screen bg-[url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop")] bg-cover bg-center'
     >
       <div className="w-full h-full flex flex-col justify-center p-6 sm:p-10 md:p-20 bg-blue-500/60">
         <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white pb-4 mt-10 sm:pb-5">
