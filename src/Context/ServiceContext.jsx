@@ -60,11 +60,7 @@ const ServiceContext = (props) => {
           desc: "Commercial insurance provides essential coverage for businesses, safeguarding them from a variety of risks like property damage, employee injuries, legal liabilities, or product-related incidents. This insurance is crucial for protecting business assets, operations, and employees, ensuring that companies can continue functioning smoothly even in the face of unexpected events. Depending on the type of business, it can include general liability insurance, workers’ compensation, product liability, business interruption coverage, and more. For any business, commercial insurance is a critical tool for risk management and long-term sustainability.",
           logo: "🏢",
         },
-        {
-          name: "Marine Insurance",
-          desc: "Marine insurance is specifically designed for businesses involved in shipping goods or transportation over water. It covers the risk of damage or loss of ships, cargo, and other transport methods during the course of trade and transportation. Marine insurance protects against the financial impact of natural disasters, piracy, accidents, and other shipping-related risks. It’s essential for global businesses dealing with international shipping, as it helps mitigate the risks associated with the transport of goods across seas, offering peace of mind during complex logistics operations.",
-          logo: "🚢",
-        },
+        // Marine Insurance removed
       ],
     },
     {
@@ -117,6 +113,25 @@ const ServiceContext = (props) => {
           name: "Hybrid Mutual Funds",
           desc: "Hybrid mutual funds invest in a combination of stocks and bonds, offering a balanced approach to growth and income. These funds aim to provide moderate growth while managing risk through diversification. Hybrid funds are ideal for investors who want a mix of both equity and debt exposure in one investment vehicle. They offer a diversified portfolio that can help reduce risk while still providing opportunities for capital appreciation and income generation over time.",
           logo: "⚖️",
+        },
+      ],
+    },
+    {
+      slug: "corporate-insurance",
+      title: "Corporate Insurance",
+      description:
+        "Corporate insurance offers tailored policies for organizations, covering specialized commercial risks and operations. It ensures business continuity and financial protection from large-scale or industry-specific risks.",
+      icon: "🏦",
+      details: [
+        {
+          name: "Marine Insurance",
+          desc: "Marine insurance is specifically designed for businesses involved in shipping goods or transportation over water. It covers the risk of damage or loss of ships, cargo, and other transport methods during the course of trade and transportation. Marine insurance protects against the financial impact of natural disasters, piracy, accidents, and other shipping-related risks. It’s essential for global businesses dealing with international shipping, as it helps mitigate the risks associated with the transport of goods across seas, offering peace of mind during complex logistics operations.",
+          logo: "🚢",
+        },
+        {
+          name: "Fire Insurance",
+          desc: "Fire insurance provides coverage for damages and losses caused by fire-related incidents in commercial properties. It helps companies recover quickly from unexpected fire outbreaks, safeguarding buildings, inventory, and equipment.",
+          logo: "🔥",
         },
       ],
     },

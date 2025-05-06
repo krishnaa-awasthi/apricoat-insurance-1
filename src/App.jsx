@@ -4,13 +4,13 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Services from './Pages/Service';
 import Testimonials from './Pages/Testimonial';
-import Contact from './Pages/Contact';
 import Members from './Pages/Members';
 import { ScrollProvider } from './Context/ScrollContext';
 import { useLocation } from 'react-router-dom';
 import ServiceDetails from './Pages/ServiceDetails';
 import ChildServicesPage from './Pages/ChildService';
-
+import Footer from './Pages/Footer';
+import Contact from './Pages/Contact'
 const App = () => {
   const location = useLocation();
   const { homeRef, aboutRef, serviceRef, testimonialRef, contactRef } = useContext(ScrollProvider);
@@ -45,12 +45,21 @@ const App = () => {
     )
   }
 
-  const ServicePath = location.pathname.split('/').slice(2).join('/');
-  if (ServicePath) {
+  if (location.pathname.startsWith('/apricoat-insurance/services/')) {
     return (
       <div className="min-h-screen w-full bg-white text-black p-4 md:p-8">
         <Nav />
         <ChildServicesPage />
+      </div>
+    );
+  }
+  
+
+  if (location.pathname === '/apricoat-insurance/contact') {
+    return (
+      <div className="min-h-screen w-full bg-white text-black p-4 md:p-8">
+        <Nav />
+        <Contact />
       </div>
     );
   }
@@ -65,7 +74,7 @@ const App = () => {
         <About id='about' refProp={aboutRef}  />
         <Services id='service' refProp={serviceRef} />
         <Testimonials id='testimonial' refProp={testimonialRef} />
-        <Contact id='contact' refProp={contactRef} />
+        <Footer/>
       </main>
     </div>
   );
